@@ -3,6 +3,7 @@ body{
 
 }
 .column-right {
+    position: relative;
     width: 333px;
     height: 211px;
     padding: 14px;
@@ -10,6 +11,7 @@ body{
     margin-top: 80px;
 }
 .column-left {
+    position: relative;
     width: 766px;
     height: 211px;
     padding: 14px;
@@ -160,3 +162,84 @@ h {
     padding-right: 6px;
     border-radius: 100%;
 }
+.badge {
+    position: fixed;
+    padding: 15px;
+    width: 75px;
+    height: 80px;
+    bottom: -70px;
+    left: 20px;
+    background-color: rgb(77,1,218);
+    border-radius: 5px;
+    color: white;
+    font-family: Arial;
+    transition: background-color .5s, bottom 0.65s;
+}
+.badge:hover {
+    bottom: -15px;
+    background-color: rgb(175,1,218);
+
+}
+.label1 {
+    padding-bottom: 5px;
+}
+.label2 {
+    font-size: 75%;
+}
+.label3 {
+    font-size: 90%;
+}
+@media print {
+    .badge {
+        background-color: white;
+        border: 1px solid rgb(77,1,218);
+        bottom: -50px;
+        color: black;
+    }
+    .label1 {
+        display: none;
+    }
+}
+@media (max-width: 500px) {
+    .column-right {
+        float: left;
+        margin-top: unset;
+        margin-left: 100px;
+    }
+}
+[data-tooltip] {
+    position: relative;
+    z-index: 2;
+
+}
+
+[data-tooltip]:before,
+[data-tooltip]:after {
+    visibility: hidden;
+}
+
+[data-tooltip]:before {
+    position: absolute;
+    bottom: 1%;
+    left: 75%;
+    margin-bottom: 5px;
+    margin-left: -80px;
+    padding: 7px;
+    width: 1px;
+    border-radius: 10px;
+    background-color: rgb(175, 1, 218);
+    color: #fff;
+    content: attr(data-tooltip);
+    text-align: center;
+    transition: bottom 0.5s, opacity 1s;
+    opacity: 0;
+}
+
+[data-tooltip]:hover:before,
+[data-tooltip]:hover:after {
+    visibility: visible;
+    width: 100px;
+    bottom: 100%;
+    opacity: 1;
+}
+
