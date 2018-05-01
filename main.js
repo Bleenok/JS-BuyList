@@ -9,7 +9,7 @@ $(document).ready(function(){
     function addItem(title){
         var  bought = false;
         $(".input-item").val( title );
-        if ($(".input-item").val().replace(/\s/g, '').length > 0){
+        if ($(".input-item").val().replace().length > 0){
             var $node = $(SEGMENT);
             var $lab_node = $(LABEL);
             var num = 1;
