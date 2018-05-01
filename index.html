@@ -10,80 +10,52 @@
         <div class="column-left">
             <div class="grid">
                     <div class="form first">
-                        <div class="input new-item">
-                        <input type="text" placeholder="Назва товару">
-                        <button data-tooltip="Tooltip" class="append" >Додати</button>
+                        <div class="input-new-item">
+                        <input type="text" placeholder="Назва товару" class = input-item>
+                        <button data-tooltip="Додати товар" class="append" >Додати</button>
                     </div>
                 </div>
-                <div class="item-row">
-                    <div class="title-cell">
-                        <span class="title ">Помідори</span>
+                <div class="item-form" style="display: none">
+                    <div class="item-row">
+                     <div class="title-cell">
+                        <span class="name">Помідори</span>
+                        <input class="edit" maxlength="15" style="display: none">
                     </div>
                     <div class="add-buttons">
-                        <button data-tooltip="Tooltip" class="minus-button">-</button>
-                        <span class="count-label">1</span>
-                        <button data-tooltip="Tooltip" class="plus-button">+</button>
+                        <button data-tooltip="Зменшити" class="minus-button">-</button>
+                        <span class="count-label" >1</span>
+                        <button data-tooltip="Збільшити" class="plus-button">+</button>
                     </div>
                     <div class="last-buttons">
-                        <button data-tooltip="Tooltip" class="buy-button">Куплено</button>
-                        <button data-tooltip="Tooltip" class="delete-button">x</button>
+                        <button data-tooltip="Купити" class="buy-button">Куплено</button>
+                        <button data-tooltip="Видалити" class="delete-button">x</button>
                     </div>
-            </div>
-                <div class="item-row">
-                <div class="title-cell">
-                    <span class="title ">Печиво</span>
                 </div>
-                <div class="add-buttons">
-                    <button data-tooltip="Tooltip" class="minus-button">-</button>
-                    <span class="count-label">1</span>
-                    <button data-tooltip="Tooltip" class="plus-button">+</button>
                 </div>
-                <div class="last-buttons">
-                    <button data-tooltip="Tooltip" class="buy-button">Куплено</button>
-                    <button data-tooltip="Tooltip" class="delete-button" title="Видалити">x</button>
-                </div>
-            </div>
-                <div class="item-row last">
-                <div class="title-cell">
-                    <span class="title ">Сир</span>
-                </div>
-                <div class="add-buttons">
-                    <button data-tooltip="Tooltip" class="minus-button">-</button>
-                    <span class="count-label">1</span>
-                    <button data-tooltip="Tooltip" class="plus-button">+</button>
-                </div>
-                <div class="last-buttons">
-                    <button data-tooltip="Tooltip" class="buy-button">Куплено</button>
-                    <button data-tooltip="Tooltip" class="delete-button" title="Видалити">x</button>
-                </div>
+
             </div>
         </div>
         </div>
         <div class="column-right">
-            <div class="grid">
+            <div class="grid-right">
                 <div class="segment first">
                     <h>Залишилося</h>
                 </div>
                 <div class="segment">
-                    <div class="stats-row">
+                    <div class="stats-segment">
+                        <div class="stats-row" style="display: none">
                         <span class="stats">
-                            <span class="title">Помідори</span>
+                            <span class="stats-label">Помідори</span>
                             <span class="circle">1</span>
                         </span>
-                        <span class="stats">
-                            <span class="title">Печиво</span>
-                            <span class="circle">1</span>
-                    </span>
-                        <span class="stats">
-                            <span class="title">Сир</span>
-                            <span class="circle">1</span>
-                    </span>
+                        </div>
                     </div>
                 </div>
                 <div class="segment">
                     <h>Куплено</h>
                 </div>
-                <div class="segment last"> </div>
+                <div class="segment last">
+                    <div class="bought-row">
             </div>
         </div>
         <div class="badge">
@@ -99,5 +71,8 @@
 
         </div>
     </div>
+        </div>
+    <script	type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js">	</script>
+    <script	type="text/javascript" src="main.js">	</script>
 </body>
 </html>
